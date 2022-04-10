@@ -2,6 +2,16 @@
 
 This is an official Yarn v1 starter turborepo.
 
+## test deployments performed using vercel
+
+### web
+
+https://turborepo-project-example-web.vercel.app/
+
+### docs
+
+https://turborepo-project-example-docs.vercel.app/
+
 ## What's inside?
 
 This turborepo uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package manager. It includes the following packages/apps:
