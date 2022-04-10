@@ -1,52 +1,77 @@
-<p align="center">
-  <img width="240" src="./static/logo-monorepo.svg"/>
-</p>
+# Turborepo starter
 
-<h1 align="center">OnClass Monorepo 🚧 wip️</h1>
+This is an official Yarn v1 starter turborepo.
 
-<div align="center">
-  <p>This repository contains the onclass ecosystem systems</p>
-</div>
+## What's inside?
 
-> technologies used
+This turborepo uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package manager. It includes the following packages/apps:
 
-- 💚 [Vuejs 3](https://vuejs.org/)  - The Intuitive Vue Framework
-- 🃏 [Vite](https://vitejs.dev/)  -  Next Generation Frontend Tooling
-- 🔅 [Vitest](https://vitejs.dev/)  - A blazing fast unit-test framework
-  powered by Vite ⚡️
-- 🃏 [TurboRepo](https://turborepo.org/)  -  Turborepo is a high-performance build system for JavaScript and TypeScript codebases.
-- 🃏 [Typescript](https://www.typescriptlang.org/)  -  TypeScript is JavaScript with syntax for types.
+### Apps and Packages
 
-## Usage
+- `docs`: a [Next.js](https://nextjs.org) app
+- `web`: another [Next.js](https://nextjs.org) app
+- `ui`: a stub React component library shared by both `web` and `docs` applications
+- `config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- `tsconfig`: `tsconfig.json`s used throughout the monorepo
 
-- `yarn install` - This installs the project dependencies
-- `yarn build:marketplace` - This runs the marketplace build
-- `yarn build:workspace` - This runs the workspace build
+Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
-## Ports
+### Utilities
 
-> Marketplace
-> http://localhost:3001
+This turborepo has some additional tools already setup for you:
 
-> Workspace
-> http://localhost:3002
+- [TypeScript](https://www.typescriptlang.org/) for static type checking
+- [ESLint](https://eslint.org/) for code linting
+- [Prettier](https://prettier.io) for code formatting
 
-## Commit types
+## Setup
 
-| Commit Type | Title                    | Description                                                                                                 | Emoji |
-| ----------- | ------------------------ | ----------------------------------------------------------------------------------------------------------- | :---: |
-| `feat`      | Features                 | A new feature                                                                                               |  ✨   |
-| `fix`       | Bug Fixes                | A bug Fix                                                                                                   |  🐛   |
-| `docs`      | Documentation            | Documentation only changes                                                                                  |  📚   |
-| `style`     | Styles                   | Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)      |  💎   |
-| `refactor`  | Code Refactoring         | A code change that neither fixes a bug nor adds a feature                                                   |  📦   |
-| `perf`      | Performance Improvements | A code change that improves performance                                                                     |  🚀   |
-| `test`      | Tests                    | Adding missing tests or correcting existing tests                                                           |  🚨   |
-| `build`     | Builds                   | Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)         |   🛠   |
-| `ci`        | Continuous Integrations  | Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs) |  ⚙️   |
-| `chore`     | Chores                   | Other changes that don't modify src or test files                                                           |  ♻️   |
-| `revert`    | Reverts                  | Reverts a previous commit                                                                                   |   🗑   |
+This repository is used in the `npx create-turbo` command, and selected when choosing which package manager you wish to use with your monorepo (Yarn).
 
-## License
+### Build
 
-All code are **copyright onclass** and may not be used or reproduced without explicit permission.
+To build all apps and packages, run the following command:
+
+```
+cd my-turborepo
+yarn run build
+```
+
+### Develop
+
+To develop all apps and packages, run the following command:
+
+```
+cd my-turborepo
+yarn run dev
+```
+
+### Remote Caching
+
+Turborepo can use a technique known as [Remote Caching (Beta)](https://turborepo.org/docs/features/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+
+By default, Turborepo will cache locally. To enable Remote Caching (Beta) you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+
+```
+cd my-turborepo
+npx turbo login
+```
+
+This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+
+Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
+
+```
+npx turbo link
+```
+
+## Useful Links
+
+Learn more about the power of Turborepo:
+
+- [Pipelines](https://turborepo.org/docs/features/pipelines)
+- [Caching](https://turborepo.org/docs/features/caching)
+- [Remote Caching (Beta)](https://turborepo.org/docs/features/remote-caching)
+- [Scoped Tasks](https://turborepo.org/docs/features/scopes)
+- [Configuration Options](https://turborepo.org/docs/reference/configuration)
+- [CLI Usage](https://turborepo.org/docs/reference/command-line-reference)
