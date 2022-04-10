@@ -31,8 +31,6 @@
 > Workspace
 > http://localhost:3002
 
----
-
 ## Commit types
 
 | Commit Type | Title                    | Description                                                                                                 | Emoji |
